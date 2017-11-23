@@ -1,7 +1,7 @@
 package com.biffbangpow.mowitnow;
 
 /**
- * A mow
+ * A mow.
  */
 public class Mow {
 

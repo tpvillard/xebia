@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * A lawn.
- *
  */
 public class Lawn {
 

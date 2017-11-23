@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * The mow orientation
+ * The mow orientation.
  */
 public enum Orientation {
 

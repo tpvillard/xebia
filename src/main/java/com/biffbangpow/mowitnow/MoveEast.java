@@ -1,7 +1,7 @@
 package com.biffbangpow.mowitnow;
 
 /**
- * A move one cell in north direction.
+ * A move one cell in east direction.
  */
 public class MoveEast extends AbstractTranslation {
 

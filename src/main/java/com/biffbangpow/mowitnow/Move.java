@@ -1,7 +1,7 @@
 package com.biffbangpow.mowitnow;
 
 /**
- * A single move operation for a mow
+ * A move operation for a mow.
  */
 public interface Move {
 
@@ -11,7 +11,7 @@ public interface Move {
     void execute();
 
     /**
-     * Create a move.
+     * Creates a move.
      * @param mow the mow to move.
      * @param cmd the command used.
      * @param lawn the lawn

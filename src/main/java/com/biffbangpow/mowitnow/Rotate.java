@@ -1,7 +1,7 @@
 package com.biffbangpow.mowitnow;
 
 /**
- * A rotation
+ * A rotation.
  */
 public class Rotate extends AbstractMove {
 

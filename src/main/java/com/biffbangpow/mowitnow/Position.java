@@ -1,5 +1,8 @@
 package com.biffbangpow.mowitnow;
 
+/**
+ * A mow position.
+ */
 public class Position {
 
     private final int x;

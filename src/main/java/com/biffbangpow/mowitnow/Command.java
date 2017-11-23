@@ -1,5 +1,8 @@
 package com.biffbangpow.mowitnow;
 
+/**
+ * A mow command.
+ */
 public enum Command {
 
     ROTATE_LEFT('G') {

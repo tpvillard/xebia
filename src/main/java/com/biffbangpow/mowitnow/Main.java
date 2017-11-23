@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Entry point for the mowitnow application.
+ * Main entry point for the mowitnow application.
  */
 public class Main {
 
