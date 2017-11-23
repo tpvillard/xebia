@@ -2,7 +2,6 @@ package com.biffbangpow.mowitnow;
 
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,7 +22,7 @@ public class MoveTest {
     @Test
     public void test_mow_has_rotated() {
 
-        Rotation move = new Rotation(mow, lawn, Command.ROTATE_RIGHT);
+        Rotate move = new Rotate(mow, lawn, Command.ROTATE_RIGHT);
         move.execute();
         Assert.assertEquals(mow.getOrientation(), Orientation.EAST);
     }

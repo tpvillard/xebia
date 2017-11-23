@@ -3,9 +3,9 @@ package com.biffbangpow.mowitnow;
 /**
  * A rotation
  */
-public class Rotation extends AbstractMove {
+public class Rotate extends AbstractMove {
 
-    public Rotation(Mow mow, Lawn lawn, Command cmd) {
+    public Rotate(Mow mow, Lawn lawn, Command cmd) {
         super(mow, lawn, cmd);
 
     }
