@@ -22,7 +22,7 @@ public interface Move {
         switch (cmd) {
             case ROTATE_LEFT:
             case ROTATE_RIGHT:
-                move = new Rotation(mow, lawn, cmd);
+                move = new Rotate(mow, lawn, cmd);
                 break;
 
             case TRANSLATION:
