@@ -5,32 +5,15 @@ package com.biffbangpow.mowitnow;
  */
 public enum Command {
 
-    ROTATE_LEFT('G') {
-        @Override
-        boolean isRotation() {
-            return true;
-        }
-    },
-    ROTATE_RIGHT('D') {
-        @Override
-        boolean isRotation() {
-            return true;
-        }
-    },
-    TRANSLATION('A') {
-        @Override
-        boolean isRotation() {
-            return false;
-        }
-    };
+    ROTATE_LEFT('G'),
+    ROTATE_RIGHT('D'),
+    TRANSLATION('A');
 
     private final char c;
 
     Command(char c) {
         this.c = c;
     }
-
-    abstract boolean isRotation();
 
     private char getChar() {
         return c;

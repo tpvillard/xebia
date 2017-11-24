@@ -15,13 +15,6 @@ public class CommandTest {
     }
 
     @Test
-    public void test_is_a_rotation() {
-        Assert.assertFalse(Command.TRANSLATION.isRotation());
-        Assert.assertTrue(Command.ROTATE_LEFT.isRotation());
-        Assert.assertTrue(Command.ROTATE_RIGHT.isRotation());
-    }
-
-    @Test
     public void test_command_is_parsed() {
         List<Command> commands = MoveSequence.parseCommands("GAGAGAGAA");
         Assert.assertNotNull(commands);
