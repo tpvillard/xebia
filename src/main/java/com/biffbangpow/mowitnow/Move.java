@@ -13,35 +13,37 @@ public interface Move {
     /**
      * Creates a move.
      * @param mow the mow to move.
-     * @param cmd the command used.
+
      * @param lawn the lawn
      * @return the move
      */
-    static Move create(Mow mow, Command cmd, Lawn lawn) {
+    static Move create(Mow mow,Command cmd, Lawn lawn) {
         Move move;
         switch (cmd) {
             case ROTATE_LEFT:
+                move = new RotateAntiClockwise(mow, lawn);
+                break;
             case ROTATE_RIGHT:
-                move = new Rotate(mow, lawn, cmd);
+                move = new RotateClockwise(mow, lawn);
                 break;
 
             case TRANSLATION:
                 switch (mow.getOrientation()) {
 
                     case NORTH:
-                        move = new MoveNorth(mow, lawn, cmd);
+                        move = new MoveNorth(mow, lawn);
                         break;
 
                     case EAST:
-                        move = new MoveEast(mow, lawn, cmd);
+                        move = new MoveEast(mow, lawn);
                         break;
 
                     case SOUTH:
-                        move = new MoveSouth(mow, lawn, cmd);
+                        move = new MoveSouth(mow, lawn);
                         break;
 
                     case WEST:
-                        move = new MoveWest(mow, lawn, cmd);
+                        move = new MoveWest(mow, lawn);
                         break;
                     default:
                         throw new IllegalArgumentException("Orientation not supported: "+ cmd);

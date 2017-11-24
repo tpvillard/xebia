@@ -5,9 +5,9 @@ package com.biffbangpow.mowitnow;
  */
 public class MoveSouth extends AbstractTranslation {
 
-    public MoveSouth(Mow mow, Lawn lawn, Command cmd) {
+    public MoveSouth(Mow mow, Lawn lawn) {
 
-        super(mow, lawn, cmd);
+        super(mow, lawn);
     }
 
     @Override

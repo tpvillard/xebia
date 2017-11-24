@@ -20,11 +20,19 @@ public class MoveTest {
     }
 
     @Test
-    public void test_mow_has_rotated() {
+    public void test_mow_rotate_clockwise() {
 
-        Rotate move = new Rotate(mow, lawn, Command.ROTATE_RIGHT);
+        RotateClockwise move = new RotateClockwise(mow, lawn);
         move.execute();
         Assert.assertEquals(mow.getOrientation(), Orientation.EAST);
+    }
+
+    @Test
+    public void test_mow_rotate_anticlockwise() {
+
+        RotateAntiClockwise move = new RotateAntiClockwise(mow, lawn);
+        move.execute();
+        Assert.assertEquals(mow.getOrientation(), Orientation.WEST);
     }
 
     @Test
@@ -32,7 +40,7 @@ public class MoveTest {
 
         mow.setOrientation(Orientation.NORTH);
         Position destination = new Position(2, 3);
-        MoveNorth move = new MoveNorth(mow, lawn, Command.TRANSLATION);
+        MoveNorth move = new MoveNorth(mow, lawn);
         executeAndVerify(move, source, destination);
     }
 
@@ -41,7 +49,7 @@ public class MoveTest {
 
         mow.setOrientation(Orientation.EAST);
         Position destination = new Position(3, 2);
-        MoveEast move = new MoveEast(mow, lawn, Command.TRANSLATION);
+        MoveEast move = new MoveEast(mow, lawn);
         executeAndVerify(move, source, destination);
     }
 
@@ -50,7 +58,7 @@ public class MoveTest {
 
         mow.setOrientation(Orientation.SOUTH);
         Position destination = new Position(2, 1);
-        MoveSouth move = new MoveSouth(mow, lawn, Command.TRANSLATION);
+        MoveSouth move = new MoveSouth(mow, lawn);
         executeAndVerify(move, source, destination);
     }
 
@@ -59,7 +67,7 @@ public class MoveTest {
 
         mow.setOrientation(Orientation.WEST);
         Position destination = new Position(1, 2);
-        MoveWest move = new MoveWest(mow, lawn, Command.TRANSLATION);
+        MoveWest move = new MoveWest(mow, lawn);
         executeAndVerify(move, source, destination);
     }
 
@@ -77,21 +85,21 @@ public class MoveTest {
         mow.setPosition(position);
 
         mow.setOrientation(Orientation.EAST);
-        MoveEast moveEast = new MoveEast(mow, lawn, Command.TRANSLATION);
+        MoveEast moveEast = new MoveEast(mow, lawn);
         verifyDidNotMove(moveEast, position);
 
         mow.setOrientation(Orientation.NORTH);
-        MoveNorth moveNorth = new MoveNorth(mow, lawn, Command.TRANSLATION);
+        MoveNorth moveNorth = new MoveNorth(mow, lawn);
         verifyDidNotMove(moveNorth, position);
 
         position = new Position(0, 0);
         mow.setPosition(position);
         mow.setOrientation(Orientation.SOUTH);
-        MoveSouth moveSouth = new MoveSouth(mow, lawn, Command.TRANSLATION);
+        MoveSouth moveSouth = new MoveSouth(mow, lawn);
         verifyDidNotMove(moveSouth, position);
 
         mow.setOrientation(Orientation.WEST);
-        MoveWest moveWest = new MoveWest(mow, lawn, Command.TRANSLATION);
+        MoveWest moveWest = new MoveWest(mow, lawn);
         verifyDidNotMove(moveWest, position);
     }
 

@@ -5,9 +5,9 @@ package com.biffbangpow.mowitnow;
  */
 public abstract class AbstractTranslation extends AbstractMove {
 
-    AbstractTranslation(Mow mow, Lawn lawn, Command cmd) {
+    AbstractTranslation(Mow mow, Lawn lawn) {
 
-        super(mow, lawn, cmd);
+        super(mow, lawn);
     }
 
     protected abstract Position computeDestination();
