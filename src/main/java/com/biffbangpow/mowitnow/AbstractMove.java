@@ -6,10 +6,8 @@ package com.biffbangpow.mowitnow;
 public abstract class AbstractMove implements Move {
 
     protected final Mow mow;
-    protected final Lawn lawn;
 
-    public AbstractMove(Mow mow, Lawn lawn) {
+    public AbstractMove(Mow mow) {
         this.mow = mow;
-        this.lawn = lawn;
     }
 }

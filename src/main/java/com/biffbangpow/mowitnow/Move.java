@@ -21,10 +21,10 @@ public interface Move {
         Move move;
         switch (cmd) {
             case ROTATE_LEFT:
-                move = new RotateAntiClockwise(mow, lawn);
+                move = new RotateAntiClockwise(mow);
                 break;
             case ROTATE_RIGHT:
-                move = new RotateClockwise(mow, lawn);
+                move = new RotateClockwise(mow);
                 break;
 
             case TRANSLATION:

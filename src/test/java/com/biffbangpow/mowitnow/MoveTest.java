@@ -22,7 +22,7 @@ public class MoveTest {
     @Test
     public void test_mow_rotate_clockwise() {
 
-        RotateClockwise move = new RotateClockwise(mow, lawn);
+        RotateClockwise move = new RotateClockwise(mow);
         move.execute();
         Assert.assertEquals(mow.getOrientation(), Orientation.EAST);
     }
@@ -30,7 +30,7 @@ public class MoveTest {
     @Test
     public void test_mow_rotate_anticlockwise() {
 
-        RotateAntiClockwise move = new RotateAntiClockwise(mow, lawn);
+        RotateAntiClockwise move = new RotateAntiClockwise(mow);
         move.execute();
         Assert.assertEquals(mow.getOrientation(), Orientation.WEST);
     }

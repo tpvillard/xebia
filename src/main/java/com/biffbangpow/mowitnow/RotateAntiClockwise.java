@@ -5,8 +5,8 @@ package com.biffbangpow.mowitnow;
  */
 public class RotateAntiClockwise extends AbstractMove {
 
-    public RotateAntiClockwise(Mow mow, Lawn lawn) {
-        super(mow, lawn);
+    public RotateAntiClockwise(Mow mow) {
+        super(mow);
 
     }
 
