@@ -29,7 +29,9 @@ Chaque tondeuse se déplace de façon séquentielle, ce qui signifie que la seco
 bouge que lorsque la première a exécuté intégralement sa série d'instructions.
 Lorsqu'une tondeuse achève une série d'instruction, elle communique sa position et son
 orientation.
+
 OBJECTIF
+
 Concevoir et écrire un programme s'exécutant sur une JVM et implémentant la spécification
 ci-dessus et passant le test ci-après
 TEST
