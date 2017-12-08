@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tpvillard/xebia.svg?branch=master)](https://travis-ci.org/tpvillard/xebia)
+
 # xebia
 
 La société MowItNow a décidé de développer une tondeuse à gazon automatique, destinée aux
