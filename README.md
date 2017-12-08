@@ -38,13 +38,22 @@ Concevoir et écrire un programme s'exécutant sur une JVM et implémentant la s
 ci-dessus et passant le test ci-après
 TEST
 Le fichier suivant est fourni en entrée :
+
 5 5
+
 1 2 N
+
 GAGAGAGAA
+
 3 3 E
+
 AADAADADDA
+
 On attend le résultat suivant (position finale des tondeuses) :
+
 1 3 N
+
 5 1 E
+
 NB: Les données en entrée peuvent être injectée sous une autre forme qu'un fichier (par
 exemple un test automatisé).
