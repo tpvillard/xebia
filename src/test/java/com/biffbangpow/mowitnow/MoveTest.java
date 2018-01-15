@@ -12,7 +12,7 @@ public class MoveTest {
     private Lawn lawn = new Lawn(5, 5);
 
     @BeforeMethod
-    public void setup() {
+    public void setUp() {
         lawn.clear();
         mow.setOrientation(Orientation.NORTH);
         mow.setPosition(source);
@@ -20,7 +20,7 @@ public class MoveTest {
     }
 
     @Test
-    public void test_mow_rotate_clockwise() {
+    public void mow_rotate_clockwise() {
 
         RotateClockwise move = new RotateClockwise(mow);
         move.execute();
@@ -28,7 +28,7 @@ public class MoveTest {
     }
 
     @Test
-    public void test_mow_rotate_anticlockwise() {
+    public void mow_rotate_anticlockwise() {
 
         RotateAntiClockwise move = new RotateAntiClockwise(mow);
         move.execute();
@@ -36,7 +36,7 @@ public class MoveTest {
     }
 
     @Test
-    public void test_mow_has_moved_north() {
+    public void mow_moves_north() {
 
         mow.setOrientation(Orientation.NORTH);
         Position destination = new Position(2, 3);
@@ -45,7 +45,7 @@ public class MoveTest {
     }
 
     @Test
-    public void test_mow_has_moved_east() {
+    public void mow_moves_east() {
 
         mow.setOrientation(Orientation.EAST);
         Position destination = new Position(3, 2);
@@ -54,7 +54,7 @@ public class MoveTest {
     }
 
     @Test
-    public void test_mow_has_moved_south() {
+    public void mow_moves_south() {
 
         mow.setOrientation(Orientation.SOUTH);
         Position destination = new Position(2, 1);
@@ -63,7 +63,7 @@ public class MoveTest {
     }
 
     @Test
-    public void test_mow_has_moved_west() {
+    public void mow_moves_west() {
 
         mow.setOrientation(Orientation.WEST);
         Position destination = new Position(1, 2);
@@ -79,7 +79,7 @@ public class MoveTest {
     }
 
     @Test
-    public void test_mow_has_not_move() {
+    public void mow_does_not_move_when_destination_is_not_permitted() {
 
         Position position = new Position(5, 5);
         mow.setPosition(position);

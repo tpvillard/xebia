@@ -9,7 +9,7 @@ import java.util.Set;
 public class MainTest {
 
     @Test
-    public void test_run() {
+    public void run() {
 
         String[] spec = {"5 5", "1 2 N", "GAGAGAGAA", "3 3 E", "AADAADADDA" };
         Main main = Main.of(spec);

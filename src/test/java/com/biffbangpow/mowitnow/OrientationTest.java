@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class OrientationTest {
 
     @Test
-    public void test_rotation_map() {
+    public void rotation_map() {
 
         Assert.assertEquals(Orientation.EAST, Orientation.get(Orientation.NORTH, Command.ROTATE_RIGHT));
         Assert.assertEquals(Orientation.WEST, Orientation.get(Orientation.NORTH, Command.ROTATE_LEFT));

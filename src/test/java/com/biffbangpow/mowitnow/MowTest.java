@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 public class MowTest {
 
     @Test
-    public void test_mow_is_parsed() {
+    public void mow_is_parsed() {
         Mow mow = Mow.parse("1 2 N");
         Assert.assertNotNull(mow);
     }
 
     @Test(expectedExceptions = NumberFormatException.class)
-    public void test_mow_parsing_fails() {
+    public void mow_parsing_fails() {
         Mow.parse("A 6 S");
     }
 }

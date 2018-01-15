@@ -8,13 +8,13 @@ import java.util.List;
 public class MoveSequenceTest {
 
     @Test
-    public void test_command_is_parsed() {
+    public void command_is_successfully_parsed() {
         List<Command> commands = MoveSequence.parseCommands("GAGAGAGAA");
         Assert.assertNotNull(commands);
     }
 
     @Test(expectedExceptions = IllegalArgumentException.class)
-    public void test_mow_parsing_fails() {
+    public void exception_raised_when_command_specification_in_error() {
         MoveSequence.parseCommands("ZZZZZZZZ");
     }
 }
