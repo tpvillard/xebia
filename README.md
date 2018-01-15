@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tpvillard/xebia.svg?branch=master)](https://travis-ci.org/tpvillard/xebia)
+[![Build Status](https://travis-ci.org/tpvillard/xebia.svg?branch=master)](https://travis-ci.org/tpvillard/xebia) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e4339bb9108a4cf5a297e6232e8039d6)](https://www.codacy.com/app/tpvillard/xebia?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tpvillard/xebia&amp;utm_campaign=Badge_Grade)
 
 # xebia
 
