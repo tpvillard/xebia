@@ -1,8 +1,11 @@
 package com.biffbangpow.mowitnow;
 
+import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.biffbangpow.mowitnow.Command.*;
 
 /**
  * The mow orientation.
@@ -25,28 +28,25 @@ public enum Orientation {
     }
 
     static Orientation of(char c) {
-        Orientation.values();
-        for (Orientation orientation : Orientation.values()) {
-            if (orientation.getChar() == c) {
-                return orientation;
-            }
-        }
-        throw new IllegalArgumentException("Invalid Orientation: " + c);
+        return Arrays.stream(Orientation.values())
+                .filter(orientation -> orientation.getChar() == c)
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Invalid Orientation: " + c));
     }
 
     public enum Transition {
 
-        NORTH_EAST(NORTH, Command.ROTATE_RIGHT, EAST),
-        NORTH_WEST(NORTH, Command.ROTATE_LEFT, WEST),
+        NORTH_EAST(NORTH, ROTATE_RIGHT, EAST),
+        NORTH_WEST(NORTH, ROTATE_LEFT, WEST),
 
-        EAST_SOUTH(EAST, Command.ROTATE_RIGHT, SOUTH),
-        EAST_NORTH(EAST, Command.ROTATE_LEFT, NORTH),
+        EAST_SOUTH(EAST, ROTATE_RIGHT, SOUTH),
+        EAST_NORTH(EAST, ROTATE_LEFT, NORTH),
 
-        SOUTH_WEST(SOUTH, Command.ROTATE_RIGHT, WEST),
-        SOUTH_EAST(SOUTH, Command.ROTATE_LEFT, EAST),
+        SOUTH_WEST(SOUTH, ROTATE_RIGHT, WEST),
+        SOUTH_EAST(SOUTH, ROTATE_LEFT, EAST),
 
-        WEST_NORTH(WEST, Command.ROTATE_RIGHT, NORTH),
-        WEST_SOUTH(WEST, Command.ROTATE_LEFT, SOUTH);
+        WEST_NORTH(WEST, ROTATE_RIGHT, NORTH),
+        WEST_SOUTH(WEST, ROTATE_LEFT, SOUTH);
 
 
         final Orientation source;

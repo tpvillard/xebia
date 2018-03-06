@@ -1,5 +1,7 @@
 package com.biffbangpow.mowitnow;
 
+import java.util.Arrays;
+
 /**
  * A mow command.
  */
@@ -20,12 +22,9 @@ public enum Command {
     }
 
     static Command of(char c) {
-        Command.values();
-        for (Command command : Command.values()) {
-            if (command.getChar() == c) {
-                return command;
-            }
-        }
-        throw new IllegalArgumentException("Invalid Command: " + c);
+        return Arrays.stream(Command.values())
+                .filter(command -> command.getChar() == c)
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Invalid Command: " + c));
     }
 }

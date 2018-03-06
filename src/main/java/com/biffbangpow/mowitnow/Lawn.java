@@ -2,6 +2,7 @@ package com.biffbangpow.mowitnow;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * A lawn.
@@ -54,12 +55,7 @@ public class Lawn {
     }
 
     private boolean isOccupied(Position p) {
-        for (Mow mow: mows) {
-            if (mow.getPosition().equals(p)) {
-                return true;
-            }
-        }
-        return false;
+        return mows.stream().anyMatch(mow -> mow.getPosition().equals(p));
     }
 
     /**

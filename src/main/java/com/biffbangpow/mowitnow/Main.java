@@ -45,7 +45,7 @@ public class Main {
     }
 
 
-    public Set<Mow> getMow() {
-        return moves.stream().map(MoveSequence::getMow).collect(Collectors.toSet());
+    public List<Mow> getMows() {
+        return moves.stream().map(MoveSequence::getMow).collect(Collectors.toList());
     }
 }
