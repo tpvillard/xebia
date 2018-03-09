@@ -12,12 +12,12 @@ public interface Move {
 
     /**
      * Creates a move.
-     * @param mow the mow to move.
-
+     *
+     * @param mow  the mow to move.
      * @param lawn the lawn
      * @return the move
      */
-    static Move create(Mow mow,Command cmd, Lawn lawn) {
+    static Move create(Mow mow, Command cmd, Lawn lawn) {
         Move move;
         switch (cmd) {
             case ROTATE_LEFT:
@@ -46,11 +46,11 @@ public interface Move {
                         move = new MoveWest(mow, lawn);
                         break;
                     default:
-                        throw new IllegalArgumentException("Orientation not supported: "+ cmd);
+                        throw new IllegalArgumentException("Orientation not supported: " + cmd);
                 }
                 break;
             default:
-                throw new IllegalArgumentException("Command not supported: "+ cmd);
+                throw new IllegalArgumentException("Command not supported: " + cmd);
         }
         return move;
     }
