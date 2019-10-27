@@ -2,7 +2,6 @@ package com.biffbangpow.mowitnow;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * A lawn.

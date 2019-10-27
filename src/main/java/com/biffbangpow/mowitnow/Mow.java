@@ -68,8 +68,7 @@ public class Mow {
 
         Mow mow = (Mow) o;
 
-        if (position != null ? !position.equals(mow.position) : mow.position != null) return false;
-        return orientation == mow.orientation;
+        return (position != null ? position.equals(mow.position) : mow.position == null) && orientation == mow.orientation;
     }
 
     @Override

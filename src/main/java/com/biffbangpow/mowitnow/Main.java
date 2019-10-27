@@ -11,7 +11,7 @@ public class Main {
     private final Lawn lawn;
     private final List<MoveSequence> moves;
 
-    public Main(List<MoveSequence> moves, Lawn lawn) {
+    private Main(List<MoveSequence> moves, Lawn lawn) {
         this.moves = moves;
         this.lawn = lawn;
     }

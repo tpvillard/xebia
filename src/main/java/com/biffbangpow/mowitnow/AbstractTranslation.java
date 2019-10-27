@@ -5,7 +5,7 @@ package com.biffbangpow.mowitnow;
  */
 public abstract class AbstractTranslation extends AbstractMove {
 
-    protected final Lawn lawn;
+    private final Lawn lawn;
 
     AbstractTranslation(Mow mow, Lawn lawn) {
 

@@ -3,7 +3,6 @@ package com.biffbangpow.mowitnow;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * A move sequence for a mow.
